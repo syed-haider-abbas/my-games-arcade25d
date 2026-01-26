@@ -1,4 +1,4 @@
-const CACHE_NAME = 'arcade-2.5d-v7';
+const CACHE_NAME = 'arcade-2.5d-v9';
 
 const PRECACHE_ASSETS = [
   '/',
@@ -14,12 +14,7 @@ const PRECACHE_ASSETS = [
   // Icons
   'https://cdn-icons-png.flaticon.com/512/808/808439.png',
   // Game Images (Precache for Home Screen offline support)
-  'https://images.unsplash.com/photo-1611996575749-79a3a250f948?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1580541832626-2a7131ee809f?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1642425149556-b6f90e946859?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1511193311914-0346f16efe90?q=80&w=800&auto=format&fit=crop'
+  // Images removed in favor of CSS-generated thumbnails
 ];
 
 self.addEventListener('install', (event) => {
