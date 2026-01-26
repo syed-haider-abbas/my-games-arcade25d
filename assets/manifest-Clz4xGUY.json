@@ -1,7 +1,7 @@
 {
   "name": "Arcade 2.5D",
   "short_name": "Arcade",
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
