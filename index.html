@@ -27,7 +27,7 @@
       body {
         overflow: hidden;
         overscroll-behavior: none;
-        touch-action: none; /* Global disable for pull-to-refresh etc in standalone */
+        touch-action: pan-y; /* Allow vertical scrolling (menus) but block horizontal/zoom. Game boards override this to 'none'. */
       }
       ::-webkit-scrollbar {
         width: 8px;
@@ -63,11 +63,15 @@
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
       }
-      /* 2. Kill Visual Effects (Shadows, Blurs) */
+      /* 2. Kill Visual Effects */
+      /* We disable shadows globally BUT we exempt elements with "inset" shadows (like board holes) 
+         because removing them makes the 2.5D game boards look completely broken/flat. */
+      body.no-animations *:not([class*="inset"]) {
+        box-shadow: none !important;
+      }
       body.no-animations *,
       body.no-animations *::before,
       body.no-animations *::after {
-        box-shadow: none !important;
         text-shadow: none !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
@@ -172,7 +176,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-DTGGXekd.js"></script>
+  <script type="module" crossorigin src="/assets/index-DnUjtfjq.js"></script>
 </head>
   <body class="h-screen w-screen bg-slate-50 dark:bg-[#0f172a] text-slate-900 dark:text-white transition-colors duration-300">
     <div id="root"></div>
