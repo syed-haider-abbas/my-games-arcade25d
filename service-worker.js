@@ -17,6 +17,7 @@ const PRECACHE_ASSETS = [
   'https://assets.haiderabbas.me/games/home/images/2048-thumb.webp',
   'https://assets.haiderabbas.me/games/home/images/connect-4-thumb.webp',
   'https://assets.haiderabbas.me/games/home/images/reversi-thumb.webp',
+  'https://assets.haiderabbas.me/games/home/images/chess-kiddo-thumb.webp',
   'https://assets.haiderabbas.me/games/home/images/slide-puzzle-thumb.webp',
   // Slide Puzzle Thumbnails
   'https://assets.haiderabbas.me/games/slide-puzzle/images/airplane-baby-thumb.webp',
