@@ -1,4 +1,4 @@
-var ke=Object.defineProperty;var we=(c,e,t)=>e in c?ke(c,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):c[e]=t;var M=(c,e,t)=>we(c,typeof e!="symbol"?e+"":e,t);import{f as T,c as Se,p as A,r as G,j as a,B as R,u as be,P as de,V as Ne}from"./index-Zr6GBYZ8.js";import{H as ye,G as ce}from"./GameConfigFooter-BijTWn2m.js";/**
+var ke=Object.defineProperty;var we=(c,e,t)=>e in c?ke(c,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):c[e]=t;var M=(c,e,t)=>we(c,typeof e!="symbol"?e+"":e,t);import{f as T,c as Se,p as A,r as G,j as a,B as R,u as be,P as de,V as Ne}from"./index-Da5YUjov.js";import{H as ye,G as ce}from"./GameConfigFooter-BFlqINfy.js";/**
  * @license
  * Copyright (c) 2023, Jeff Hlywa (jhlywa@gmail.com)
  * All rights reserved.
