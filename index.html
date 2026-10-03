@@ -30,14 +30,17 @@
         overscroll-behavior: none;
         touch-action: pan-y; /* Allow vertical scrolling (menus) but block horizontal/zoom. Game boards override this to 'none'. */
       }
+      
       /* Default Emoji/Symbol Font Stack (Windows/Android/Linux) */
       .font-emoji {
         /* font-family: "Segoe UI Symbol", "DejaVu Sans", sans-serif; */
       }
+
       /* Apple Specific Override - Injected via JS class on body */
       body.is-apple .font-emoji {
         font-family: "Apple Symbols", "Segoe UI Symbol", "DejaVu Sans", sans-serif;
       }
+      
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -48,6 +51,7 @@
         background: #475569;
         border-radius: 4px;
       }
+
       .preserve-3d {
         transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
@@ -60,6 +64,7 @@
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
       }
+
       /* Reduce Motion / Disable Animations Mode / Performance Mode */
       /* 1. Kill timing */
       body.no-animations *,
@@ -72,12 +77,14 @@
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
       }
+
       /* 2. Kill Visual Effects */
       /* We disable shadows globally BUT we exempt elements with "inset" shadows (like board holes) 
          because removing them makes the 2.5D game boards look completely broken/flat. */
       body.no-animations *:not([class*="inset"]) {
         box-shadow: none !important;
       }
+      
       body.no-animations *,
       body.no-animations *::before,
       body.no-animations *::after {
@@ -85,7 +92,9 @@
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
       }
+
       /* 3. Handle Glassmorphism Fallbacks (Theme Aware) */
+      
       /* Light Mode Fallbacks */
       html:not(.dark) body.no-animations .backdrop-blur-md,
       html:not(.dark) body.no-animations .backdrop-blur-xl,
@@ -95,6 +104,7 @@
         background-color: #ffffff !important;
         border: 1px solid #e2e8f0 !important; /* Slate 200 */
       }
+
       /* Dark Mode Fallbacks */
       html.dark body.no-animations .backdrop-blur-md,
       html.dark body.no-animations .backdrop-blur-xl,
@@ -104,7 +114,9 @@
         background-color: #0f172a !important; /* Slate 900 */
         border: 1px solid #334155 !important; /* Slate 700 */
       }
+
       /* === GPU-Accelerated Animation Keyframes (Static Load) === */
+      
       @keyframes bounce-in {
         0% { transform: scale(0) translateY(-100%); opacity: 0; }
         60% { transform: scale(1.1) translateY(10%); opacity: 1; }
@@ -114,6 +126,7 @@
         animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         will-change: transform, opacity;
       }
+      
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(10px); }
         to { opacity: 1; transform: translateY(0); }
@@ -122,6 +135,7 @@
         animation: fadeIn 0.4s ease-out forwards;
         will-change: transform, opacity;
       }
+      
       @keyframes pop {
         0% { transform: scale(0.5); opacity: 0; }
         60% { transform: scale(1.1); opacity: 1; }
@@ -131,6 +145,7 @@
         animation: pop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         will-change: transform, opacity;
       }
+      
       @keyframes drop-rotate {
         0% { 
           transform: translateY(var(--drop-offset)) rotate(0deg); 
@@ -151,7 +166,9 @@
         animation: drop-rotate 0.5s forwards;
         will-change: transform, opacity;
       }
+
       /* === Mobile Touch Optimizations === */
+      
       /* Prevent text selection during gameplay */
       .touch-none {
         touch-action: none;
@@ -159,14 +176,17 @@
         user-select: none;
         -webkit-touch-callout: none;
       }
+      
       /* Improve tap responsiveness by removing 300ms delay */
       button, [role="button"], .cursor-pointer {
         touch-action: manipulation;
       }
+      
       /* Hardware acceleration hints for animated elements */
       .will-change-transform {
         will-change: transform;
       }
+
       /* Optimize scrolling performance */
       .overflow-y-auto {
         -webkit-overflow-scrolling: touch;
@@ -196,7 +216,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-6H4FquNW.js"></script>
+  <script type="module" crossorigin src="/assets/index-CI4iOoO6.js"></script>
 <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body class="h-screen w-screen bg-slate-50 dark:bg-[#0f172a] text-slate-900 dark:text-white transition-colors duration-300">
     <div id="root"></div>
